@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finaluri_Web</title>
+  <meta name="description" content="A general goods depot: browse the catalog, fill your cart, and check out." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav wrap">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">SG</span>
+        Shop General.
+      </a>
+
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" data-nav-links>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="shop.html">Catalog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="cart.html" class="cart-link">
+            Cart <span class="cart-count" data-cart-count>0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-shell">
+      <div class="wrap split-shell">
+        <div class="panel-pin hero-copy">
+          <p class="eyebrow">Est. catalog no. 004, Featured stock this week!</p>
+          <h1>Every-day goods.</h1>
+          <p class="lede">
+            Shop General stocks electronics, jewelry, and clothing pulled
+            straight from the warehouse. Browse the catalog, stamp
+            items into your cart, and check out.
+          </p>
+          <div class="hero-actions">
+            <a href="shop.html" class="btn btn-primary">Browse the catalog</a>
+            <a href="contact.html" class="btn btn-ghost">Request a quote</a>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat">
+              <strong data-stat-count>—</strong>
+              <span>Items in stock</span>
+            </div>
+            <div class="stat">
+              <strong data-stat-categories>—</strong>
+              <span>Categories</span>
+            </div>
+            <div class="stat">
+              <strong>24h</strong>
+              <span>Dispatch time</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-feed">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Top rated this week</p>
+              <h2>Featured stock</h2>
+            </div>
+            <a href="shop.html" class="btn btn-ghost btn-small">View full catalog</a>
+          </div>
+          <div class="product-grid" data-featured-grid></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p>&copy; 2026 Shop General.</p>
+      <div class="footer-links">
+        <a href="shop.html">Catalog</a>
+        <a href="cart.html">Cart</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

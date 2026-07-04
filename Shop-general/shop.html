@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catalog</title>
+  <meta name="description" content="Browse the full Depot Co. catalog: search, filter by category, and sort." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav wrap">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">SG</span>
+        Shop General.
+      </a>
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" data-nav-links>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" aria-current="page">Catalog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="cart.html" class="cart-link">
+            Cart <span class="cart-count" data-cart-count>0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap split-shell">
+
+      <aside class="panel-pin">
+        <p class="eyebrow">Filter the catalog</p>
+        <h2 style="margin-bottom:18px;">Find something</h2>
+        <div class="field-inline">
+          <label for="search">Search</label>
+          <label class="search-field">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="search" placeholder="Search products…" data-search />
+          </label>
+        </div>
+
+
+        <div class="field-inline">
+          <label for="sort">Sort by</label>
+          <div class="sort-field">
+            <select id="sort" data-sort>
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="rating">Top rated</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-inline">
+          <label>Category</label>
+          <div class="chip-row" data-category-chips></div>
+        </div>
+
+        <p class="mini-cart-note">
+          <span data-result-count>Loading…</span>
+        </p>
+      </aside>
+
+      <div class="panel-feed">
+        <p class="eyebrow">Full inventory</p>
+        <h1 style="margin-bottom:20px;">The catalog</h1>
+
+        <div class="product-grid" data-product-grid></div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p>&copy; 2026 Shop General.</p>
+      <div class="footer-links">
+        <a href="shop.html">Catalog</a>
+        <a href="cart.html">Cart</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/common.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

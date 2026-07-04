@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact.</title>
+  <meta name="description" content="Send a message to Shop General." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav wrap">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">SG</span>
+        Shop General.
+      </a>
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" data-nav-links>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Catalog</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li>
+          <a href="cart.html" class="cart-link">
+            Cart <span class="cart-count" data-cart-count>0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap split-shell">
+
+      <aside class="panel-pin">
+        <p class="eyebrow">Get in touch</p>
+        <h2 style="margin-bottom:14px;">Contact the store</h2>
+        <p class="lede" style="font-size:0.92rem; margin-bottom:20px;">
+          Fill out the form below to send us a message. We'll respond as soon as
+          we can, usually within 1–2 business days.
+        </p>
+
+        <form data-contact-form novalidate>
+
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" autocomplete="name" />
+            <span class="field-error"></span>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" autocomplete="email" />
+            <span class="field-error"></span>
+          </div>
+
+          <div class="field">
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+              <option value="">Choose one…</option>
+              <option value="Order status">Order status</option>
+              <option value="Bulk quote">Bulk quote</option>
+              <option value="Returns">Returns</option>
+              <option value="Other">Other</option>
+            </select>
+            <span class="field-error"></span>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us what you need…"></textarea>
+            <span class="field-error"></span>
+          </div>
+
+          <p class="form-note" data-form-success hidden>Message sent, we'll get back to you shortly.</p>
+
+          <button type="submit" class="btn btn-primary btn-block">Send message</button>
+        </form>
+      </aside>
+
+      <div class="panel-feed">
+        <h1 style="margin-bottom:8px;">Message log</h1>
+        <div class="log-list" data-log-list></div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p>&copy; 2026 Shop General.</p>
+      <div class="footer-links">
+        <a href="shop.html">Catalog</a>
+        <a href="cart.html">Cart</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
